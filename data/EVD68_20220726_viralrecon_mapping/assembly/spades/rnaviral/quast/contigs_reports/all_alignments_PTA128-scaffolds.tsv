@@ -1,0 +1,12 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+18	7328	5	7315	202148929_Spain_2021	NODE_1_length_7315_cov_74.947252	99.7		True
+CONTIG	NODE_1_length_7315_cov_74.947252	7315	correct
+CONTIG	NODE_2_length_2343_cov_9.203965	2343	unaligned
+CONTIG	NODE_3_length_2337_cov_6.931537	2337	unaligned
+CONTIG	NODE_4_length_2165_cov_5.938337	2165	unaligned
+CONTIG	NODE_5_length_2041_cov_5.460874	2041	unaligned
+CONTIG	NODE_6_length_1786_cov_8.857560	1786	unaligned
+CONTIG	NODE_7_length_1156_cov_4.155125	1156	unaligned
+CONTIG	NODE_8_length_1116_cov_4.507191	1116	unaligned
+CONTIG	NODE_9_length_913_cov_6.697619	913	unaligned
+CONTIG	NODE_10_length_515_cov_1.454751	515	unaligned

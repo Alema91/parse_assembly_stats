@@ -1,0 +1,81 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [202148929_Spain_2021]
+	Total Regions: 1
+	Total Region Length: 7428
+Analyzing contigs...
+CONTIG: NODE_1_length_7315_cov_74.947252 (7315bp)
+Best alignment score: 7289.1 (LEN: 7311, IDY: 99.70), Total number of alignments: 1
+		One align captures most of this contig: 18 7328 | 5 7315 | 7311 7311 | 99.7 | 202148929_Spain_2021 NODE_1_length_7315_cov_74.947252
+
+CONTIG: NODE_2_length_2343_cov_9.203965 (2343bp)
+		This contig is unaligned. (2343 bp)
+		Unaligned bases: 2343 (number of Ns: 0)
+
+CONTIG: NODE_3_length_2337_cov_6.931537 (2337bp)
+		This contig is unaligned. (2337 bp)
+		Unaligned bases: 2337 (number of Ns: 0)
+
+CONTIG: NODE_4_length_2165_cov_5.938337 (2165bp)
+		This contig is unaligned. (2165 bp)
+		Unaligned bases: 2165 (number of Ns: 0)
+
+CONTIG: NODE_5_length_2041_cov_5.460874 (2041bp)
+		This contig is unaligned. (2041 bp)
+		Unaligned bases: 2041 (number of Ns: 0)
+
+CONTIG: NODE_6_length_1786_cov_8.857560 (1786bp)
+		This contig is unaligned. (1786 bp)
+		Unaligned bases: 1786 (number of Ns: 0)
+
+CONTIG: NODE_7_length_1156_cov_4.155125 (1156bp)
+		This contig is unaligned. (1156 bp)
+		Unaligned bases: 1156 (number of Ns: 0)
+
+CONTIG: NODE_8_length_1116_cov_4.507191 (1116bp)
+		This contig is unaligned. (1116 bp)
+		Unaligned bases: 1116 (number of Ns: 0)
+
+CONTIG: NODE_9_length_913_cov_6.697619 (913bp)
+		This contig is unaligned. (913 bp)
+		Unaligned bases: 913 (number of Ns: 0)
+
+CONTIG: NODE_10_length_515_cov_1.454751 (515bp)
+		This contig is unaligned. (515 bp)
+		Unaligned bases: 515 (number of Ns: 10)
+
+Analyzing coverage...
+Writing SNPs into /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/minimap_output/PTA128-scaffolds.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/minimap_output/PTA128-scaffolds.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 9 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 14362
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 7311
+
+	SNPs: 22
+	Insertions: 0
+	Deletions: 0
+

@@ -1,0 +1,24 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+18	7329	7314	1	202148929_Spain_2021	NODE_1_length_7320_cov_5706.920519	96.02		True
+CONTIG	NODE_1_length_7320_cov_5706.920519	7320	correct
+CONTIG	NODE_2_length_5378_cov_6458.013761	5378	unaligned
+CONTIG	NODE_3_length_1675_cov_3.568664	1675	unaligned
+CONTIG	NODE_4_length_1278_cov_14.849793	1278	unaligned
+CONTIG	NODE_5_length_1211_cov_6.856766	1211	unaligned
+CONTIG	NODE_6_length_1084_cov_63.269041	1084	unaligned
+CONTIG	NODE_7_length_1026_cov_20.076600	1026	unaligned
+CONTIG	NODE_8_length_1004_cov_71.032223	1004	unaligned
+CONTIG	NODE_9_length_949_cov_3.589041	949	unaligned
+CONTIG	NODE_10_length_907_cov_9.075540	907	unaligned
+CONTIG	NODE_11_length_876_cov_33.755915	876	unaligned
+CONTIG	NODE_12_length_809_cov_1.455163	809	unaligned
+CONTIG	NODE_13_length_747_cov_69.440653	747	unaligned
+CONTIG	NODE_14_length_657_cov_17.359589	657	unaligned
+CONTIG	NODE_15_length_648_cov_11.732174	648	unaligned
+CONTIG	NODE_16_length_647_cov_2.348432	647	unaligned
+CONTIG	NODE_17_length_528_cov_23.415385	528	unaligned
+CONTIG	NODE_18_length_527_cov_4.381057	527	unaligned
+CONTIG	NODE_19_length_523_cov_3.213333	523	unaligned
+CONTIG	NODE_20_length_519_cov_16.230942	519	unaligned
+CONTIG	NODE_21_length_509_cov_14.506881	509	unaligned
+CONTIG	NODE_22_length_500_cov_10.854801	500	unaligned

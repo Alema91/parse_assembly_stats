@@ -1,0 +1,21 @@
+Assembly	PTA102.scaffolds	PTA103.scaffolds	PTA128.scaffolds	PTA127.scaffolds	PTA132.scaffolds
+# misassemblies	-	-	0	0	0
+  # contig misassemblies	-	-	0	0	0
+    # c. relocations	-	-	0	0	0
+    # c. translocations	-	-	0	0	0
+    # c. inversions	-	-	0	0	0
+  # scaffold misassemblies	-	-	0	0	0
+    # s. relocations	-	-	0	0	0
+    # s. translocations	-	-	0	0	0
+    # s. inversions	-	-	0	0	0
+# misassembled contigs	-	-	0	0	0
+Misassembled contigs length	-	-	0	0	0
+# local misassemblies	-	-	0	0	0
+# scaffold gap ext. mis.	-	-	0	0	0
+# scaffold gap loc. mis.	-	-	0	0	0
+# unaligned mis. contigs	-	-	0	0	0
+# mismatches	-	-	22	20	287
+# indels	-	-	0	0	2
+    # indels (<= 5 bp)	-	-	0	0	2
+    # indels (> 5 bp)	-	-	0	0	0
+Indels length	-	-	0	0	4

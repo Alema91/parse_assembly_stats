@@ -61,3 +61,18 @@ value_readhost <- value_readhostr1 * 2
 
 # readshosh
 value_percreadhost <- table_kraken$V1[table_kraken$V5 == 1]
+
+# non host reads
+value_nonhostreads <- value_totalreads - value_readhost
+
+# % non host
+value_percnonhostreads <- round((value_readhost * 100) / value_totalreads, 2)
+
+# Contigs
+table_quast <- read.csv2("data/EVD68_20220726_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv", skip = 0, sep = "\t", header = T)
+table_quast$Assembly <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
+value_contigs <- table_quast$X..contigs[table_quast$Assembly == "PTA102"]
+value_lcontig <- table_quast$Largest.contig[table_quast$Assembly == "PTA102"]
+value_genomef <- table_quast$Genome.fraction....[table_quast$Assembly == "PTA102"]
+
+###################################################### 3

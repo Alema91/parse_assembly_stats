@@ -1,0 +1,186 @@
+/usr/local/bin/quast.py --output-dir quast -r EVD68.fasta --threads 6 PTA102.scaffolds.fa PTA103.scaffolds.fa PTA128.scaffolds.fa PTA127.scaffolds.fa PTA132.scaffolds.fa
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-4.18.0-305.19.1.el8_4.x86_64-x86_64-with-debian-8.11 (linux_64)
+  Python version: 3.7.6
+  CPUs number: 32
+
+Started: 2022-09-21 13:25:31
+
+Logging to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/quast.log
+
+CWD: /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0
+Main parameters: 
+  MODE: default, threads: 6, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/EVD68.fasta ==> EVD68
+
+Contigs:
+  Pre-processing...
+  1  PTA102.scaffolds.fa ==> PTA102.scaffolds
+  2  PTA103.scaffolds.fa ==> PTA103.scaffolds
+  3  PTA128.scaffolds.fa ==> PTA128.scaffolds
+  4  PTA127.scaffolds.fa ==> PTA127.scaffolds
+  5  PTA132.scaffolds.fa ==> PTA132.scaffolds
+
+2022-09-21 13:25:32
+Running Basic statistics processor...
+  Reference genome:
+    EVD68.fasta, length = 7428, num fragments = 1, GC % = 42.02
+  Contig files: 
+    1  PTA102.scaffolds
+    2  PTA103.scaffolds
+    3  PTA128.scaffolds
+    4  PTA127.scaffolds
+    5  PTA132.scaffolds
+  Calculating N50 and L50...
+    1  PTA102.scaffolds, N50 = 7338, L50 = 1, Total length = 10361, GC % = 42.47, # N's per 100 kbp =  0.00
+    2  PTA103.scaffolds, N50 = 7449, L50 = 1, Total length = 10497, GC % = 47.09, # N's per 100 kbp =  0.00
+    3  PTA128.scaffolds, N50 = 2337, L50 = 3, Total length = 21687, GC % = 39.25, # N's per 100 kbp =  46.11
+    4  PTA127.scaffolds, N50 = 2798, L50 = 2, Total length = 11516, GC % = 44.95, # N's per 100 kbp =  86.84
+    5  PTA132.scaffolds, N50 = 1278, L50 = 4, Total length = 29322, GC % = 45.73, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/GC_content_plot.pdf
+  Drawing PTA102.scaffolds GC content plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA102.scaffolds_GC_content_plot.pdf
+  Drawing PTA103.scaffolds GC content plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA103.scaffolds_GC_content_plot.pdf
+  Drawing PTA128.scaffolds GC content plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA128.scaffolds_GC_content_plot.pdf
+  Drawing PTA127.scaffolds GC content plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA127.scaffolds_GC_content_plot.pdf
+  Drawing PTA132.scaffolds GC content plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA132.scaffolds_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 12x)...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/coverage_histogram.pdf
+  Drawing PTA102.scaffolds coverage histogram (bin size: 230x)...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA102-scaffolds_coverage_histogram.pdf
+  Drawing PTA103.scaffolds coverage histogram (bin size: 420x)...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA103-scaffolds_coverage_histogram.pdf
+  Drawing PTA128.scaffolds coverage histogram (bin size: 15x)...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA128-scaffolds_coverage_histogram.pdf
+  Drawing PTA127.scaffolds coverage histogram (bin size: 4x)...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA127-scaffolds_coverage_histogram.pdf
+  Drawing PTA132.scaffolds coverage histogram (bin size: 1291x)...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/basic_stats/PTA132-scaffolds_coverage_histogram.pdf
+Done.
+
+2022-09-21 13:25:35
+Running Contig analyzer...
+  1  PTA102.scaffolds
+  2  PTA103.scaffolds
+  3  PTA128.scaffolds
+  1  Logging to files /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/contigs_report_PTA102-scaffolds.stdout and contigs_report_PTA102-scaffolds.stderr...
+  4  PTA127.scaffolds
+  5  PTA132.scaffolds
+  1  Aligning contigs to the reference
+  4  Logging to files /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/contigs_report_PTA127-scaffolds.stdout and contigs_report_PTA127-scaffolds.stderr...
+  4  Aligning contigs to the reference
+  5  Logging to files /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/contigs_report_PTA132-scaffolds.stdout and contigs_report_PTA132-scaffolds.stderr...
+  5  Aligning contigs to the reference
+  2  Logging to files /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/contigs_report_PTA103-scaffolds.stdout and contigs_report_PTA103-scaffolds.stderr...
+  2  Aligning contigs to the reference
+  3  Logging to files /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/contigs_report_PTA128-scaffolds.stdout and contigs_report_PTA128-scaffolds.stderr...
+  1  /usr/local/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 \
+     -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/EVD68.fasta \
+     quast/quast_corrected_input/PTA102_scaffolds.fa > quast/contigs_reports/minimap_output/PTA102-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_PTA102-scaffolds.stderr
+  3  Aligning contigs to the reference
+  4  /usr/local/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 \
+     -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/EVD68.fasta \
+     quast/quast_corrected_input/PTA127_scaffolds.fa > quast/contigs_reports/minimap_output/PTA127-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_PTA127-scaffolds.stderr
+  5  /usr/local/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 \
+     -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/EVD68.fasta \
+     quast/quast_corrected_input/PTA132_scaffolds.fa > quast/contigs_reports/minimap_output/PTA132-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_PTA132-scaffolds.stderr
+  2  /usr/local/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 \
+     -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/EVD68.fasta \
+     quast/quast_corrected_input/PTA103_scaffolds.fa > quast/contigs_reports/minimap_output/PTA103-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_PTA103-scaffolds.stderr
+  3  /usr/local/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 \
+     -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/EVD68.fasta \
+     quast/quast_corrected_input/PTA128_scaffolds.fa > quast/contigs_reports/minimap_output/PTA128-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_PTA128-scaffolds.stderr
+  2  Nothing aligned for 'PTA103.scaffolds'.
+  1  Analysis is finished.
+
+  4  Analysis is finished.
+
+  5  Analysis is finished.
+
+  3  Analysis is finished.
+
+  Creating total report...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/misassemblies_frcurve_plot.pdf
+Done for 3 out of 5. For the rest, only basic stats are going to be evaluated.
+
+2022-09-21 13:25:36
+Running NA-NGA calculation...
+  1  PTA128.scaffolds, Largest alignment = 7311, NA50 = None, NGA50 = 7311, LA50 = None, LGA50 = 1
+  2  PTA127.scaffolds, Largest alignment = 4536, NA50 = 2794, NGA50 = 4536, LA50 = 2, LGA50 = 1
+  3  PTA132.scaffolds, Largest alignment = 7314, NA50 = None, NGA50 = 7314, LA50 = None, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/aligned_stats/NGAx_plot.pdf
+Done.
+
+2022-09-21 13:25:36
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  1  PTA128.scaffolds
+  2  PTA127.scaffolds
+  3  PTA132.scaffolds
+  1  Analysis is finished.
+  2  Analysis is finished.
+  3  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2022-09-21 13:25:36
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2022-09-21 13:25:38
+RESULTS:
+  Text versions of total report are saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/report.html
+  PDF version (tables and plots) is saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/report.pdf
+  Icarus (contig browser) is saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/icarus.html
+  Log is saved to /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/quast.log
+
+Finished: 2022-09-21 13:25:39
+Elapsed time: 0:00:07.403958
+NOTICEs: 3; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

@@ -1,0 +1,8 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+2792	7327	1	4536	202148929_Spain_2021	NODE_1_length_4536_cov_23.538651	99.71		True
+CONTIG	NODE_1_length_4536_cov_23.538651	4536	correct
+18	2811	2794	1	202148929_Spain_2021	NODE_2_length_2798_cov_13.140917	99.75		True
+CONTIG	NODE_2_length_2798_cov_13.140917	2798	correct
+CONTIG	NODE_3_length_2767_cov_12.152190	2767	unaligned
+CONTIG	NODE_4_length_892_cov_3.949939	892	unaligned
+CONTIG	NODE_5_length_523_cov_1.986667	523	unaligned

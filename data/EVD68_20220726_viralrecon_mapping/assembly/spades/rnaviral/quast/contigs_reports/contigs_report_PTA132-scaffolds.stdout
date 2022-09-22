@@ -1,0 +1,129 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [202148929_Spain_2021]
+	Total Regions: 1
+	Total Region Length: 7428
+Analyzing contigs...
+CONTIG: NODE_1_length_7320_cov_5706.920519 (7320bp)
+Best alignment score: 7022.9 (LEN: 7314, IDY: 96.02), Total number of alignments: 1
+		One align captures most of this contig: 18 7329 | 7314 1 | 7312 7314 | 96.02 | 202148929_Spain_2021 NODE_1_length_7320_cov_5706.920519
+
+CONTIG: NODE_2_length_5378_cov_6458.013761 (5378bp)
+		This contig is unaligned. (5378 bp)
+		Unaligned bases: 5378 (number of Ns: 0)
+
+CONTIG: NODE_3_length_1675_cov_3.568664 (1675bp)
+		This contig is unaligned. (1675 bp)
+		Unaligned bases: 1675 (number of Ns: 0)
+
+CONTIG: NODE_4_length_1278_cov_14.849793 (1278bp)
+		This contig is unaligned. (1278 bp)
+		Unaligned bases: 1278 (number of Ns: 0)
+
+CONTIG: NODE_5_length_1211_cov_6.856766 (1211bp)
+		This contig is unaligned. (1211 bp)
+		Unaligned bases: 1211 (number of Ns: 0)
+
+CONTIG: NODE_6_length_1084_cov_63.269041 (1084bp)
+		This contig is unaligned. (1084 bp)
+		Unaligned bases: 1084 (number of Ns: 0)
+
+CONTIG: NODE_7_length_1026_cov_20.076600 (1026bp)
+		This contig is unaligned. (1026 bp)
+		Unaligned bases: 1026 (number of Ns: 0)
+
+CONTIG: NODE_8_length_1004_cov_71.032223 (1004bp)
+		This contig is unaligned. (1004 bp)
+		Unaligned bases: 1004 (number of Ns: 0)
+
+CONTIG: NODE_9_length_949_cov_3.589041 (949bp)
+		This contig is unaligned. (949 bp)
+		Unaligned bases: 949 (number of Ns: 0)
+
+CONTIG: NODE_10_length_907_cov_9.075540 (907bp)
+		This contig is unaligned. (907 bp)
+		Unaligned bases: 907 (number of Ns: 0)
+
+CONTIG: NODE_11_length_876_cov_33.755915 (876bp)
+		This contig is unaligned. (876 bp)
+		Unaligned bases: 876 (number of Ns: 0)
+
+CONTIG: NODE_12_length_809_cov_1.455163 (809bp)
+		This contig is unaligned. (809 bp)
+		Unaligned bases: 809 (number of Ns: 0)
+
+CONTIG: NODE_13_length_747_cov_69.440653 (747bp)
+		This contig is unaligned. (747 bp)
+		Unaligned bases: 747 (number of Ns: 0)
+
+CONTIG: NODE_14_length_657_cov_17.359589 (657bp)
+		This contig is unaligned. (657 bp)
+		Unaligned bases: 657 (number of Ns: 0)
+
+CONTIG: NODE_15_length_648_cov_11.732174 (648bp)
+		This contig is unaligned. (648 bp)
+		Unaligned bases: 648 (number of Ns: 0)
+
+CONTIG: NODE_16_length_647_cov_2.348432 (647bp)
+		This contig is unaligned. (647 bp)
+		Unaligned bases: 647 (number of Ns: 0)
+
+CONTIG: NODE_17_length_528_cov_23.415385 (528bp)
+		This contig is unaligned. (528 bp)
+		Unaligned bases: 528 (number of Ns: 0)
+
+CONTIG: NODE_18_length_527_cov_4.381057 (527bp)
+		This contig is unaligned. (527 bp)
+		Unaligned bases: 527 (number of Ns: 0)
+
+CONTIG: NODE_19_length_523_cov_3.213333 (523bp)
+		This contig is unaligned. (523 bp)
+		Unaligned bases: 523 (number of Ns: 0)
+
+CONTIG: NODE_20_length_519_cov_16.230942 (519bp)
+		This contig is unaligned. (519 bp)
+		Unaligned bases: 519 (number of Ns: 0)
+
+CONTIG: NODE_21_length_509_cov_14.506881 (509bp)
+		This contig is unaligned. (509 bp)
+		Unaligned bases: 509 (number of Ns: 0)
+
+CONTIG: NODE_22_length_500_cov_10.854801 (500bp)
+		This contig is unaligned. (500 bp)
+		Unaligned bases: 500 (number of Ns: 0)
+
+Analyzing coverage...
+Writing SNPs into /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/minimap_output/PTA132-scaffolds.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/minimap_output/PTA132-scaffolds.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 21 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 22002
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 7312
+
+	SNPs: 287
+	Insertions: 3
+	Deletions: 1
+

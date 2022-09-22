@@ -1,0 +1,16 @@
+reference chromosomes:
+	202148929_Spain_2021 (total length: 7428 bp, total length without N's: 7329 bp, maximal covered length: 7312 bp)
+
+total genome size: 7428
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+PTA128_scaffolds         | 99.754    | 1.002       | 0         | -         | -         | -         | -         |
+PTA127_scaffolds         | 99.741    | 1.005       | 0         | -         | -         | -         | -         |
+PTA132_scaffolds         | 99.768    | 1.001       | 0         | -         | -         | -         | -         |

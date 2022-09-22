@@ -1,0 +1,61 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [202148929_Spain_2021]
+	Total Regions: 1
+	Total Region Length: 7428
+Analyzing contigs...
+CONTIG: NODE_1_length_4536_cov_23.538651 (4536bp)
+Best alignment score: 4522.8 (LEN: 4536, IDY: 99.71), Total number of alignments: 1
+		One align captures most of this contig: 2792 7327 | 1 4536 | 4536 4536 | 99.71 | 202148929_Spain_2021 NODE_1_length_4536_cov_23.538651
+
+CONTIG: NODE_2_length_2798_cov_13.140917 (2798bp)
+Best alignment score: 2787.0 (LEN: 2794, IDY: 99.75), Total number of alignments: 1
+		One align captures most of this contig: 18 2811 | 2794 1 | 2794 2794 | 99.75 | 202148929_Spain_2021 NODE_2_length_2798_cov_13.140917
+
+CONTIG: NODE_3_length_2767_cov_12.152190 (2767bp)
+		This contig is unaligned. (2767 bp)
+		Unaligned bases: 2767 (number of Ns: 0)
+
+CONTIG: NODE_4_length_892_cov_3.949939 (892bp)
+		This contig is unaligned. (892 bp)
+		Unaligned bases: 892 (number of Ns: 0)
+
+CONTIG: NODE_5_length_523_cov_1.986667 (523bp)
+		This contig is unaligned. (523 bp)
+		Unaligned bases: 523 (number of Ns: 10)
+
+Analyzing coverage...
+Writing SNPs into /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/minimap_output/PTA127-scaffolds.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /scratch/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN/work/5f/267cb46ef6f5f424cff9f80abb3cd0/quast/contigs_reports/minimap_output/PTA127-scaffolds.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 3 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 4172
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 7310
+
+	SNPs: 20
+	Insertions: 0
+	Deletions: 0
+
