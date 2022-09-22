@@ -38,14 +38,16 @@ path <- getwd()
 posible_path <- c("/data/bi/scratch_tmp/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN")
 samples_ref <- read.table(paste0(path, "/data/samples_ref.txt"), header = F)
 samples_id <- read.table(paste0(path, "/data/samples_id.txt"), header = F)
+fastq_path <- c("/srv/fastq_repo/MiSeq_GEN_317_20220713_MDFernanadez")
 
 # Run, user and host
-name_run <- str_split(posible_path, "/", simplify = T)[, 6]
+name_run <- str_split(fastq_path, "/", simplify = T)[, 4]
 name_user <- str_split(posible_path, "_", simplify = T)[, 5]
 name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
+name_sequence <- samples_ref$V2[1]
 
 # columns names
-columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\tNon-host-reads\t%Non-host-reads\tContigs\tLargest_contig\t%Genome_fraction"
+columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\tNon-host-reads\tContigs\tLargest_contig\t%Genome_fraction"
 name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
 
 # Total reads
@@ -75,4 +77,13 @@ value_contigs <- table_quast$X..contigs[table_quast$Assembly == "PTA102"]
 value_lcontig <- table_quast$Largest.contig[table_quast$Assembly == "PTA102"]
 value_genomef <- table_quast$Genome.fraction....[table_quast$Assembly == "PTA102"]
 
-###################################################### 3
+################################################
+################################################
+## Create Table  ###############################
+################################################
+################################################
+
+df_assembly <- data.frame(matrix(0, ncol = length(name_columns)))
+colnames(df_assembly) <- name_columns
+
+df_assembly[1, ] <- c(name_run, name_user, name_host, name_sequence, value_totalreads, value_readhostr1, value_readhost, value_percreadhost, value_nonhostreads, value_percnonhostreads, value_contigs, value_lcontig, value_genomef)
