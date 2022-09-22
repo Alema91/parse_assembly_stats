@@ -43,5 +43,7 @@ name_user <- str_split(posible_path, "_", simplify = T)[, 5]
 name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
 
 # columns names
-columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\treadsvirus\t%readsvirus\tunmappedreads\t%unmapedreads\tmedianDPcoveragevirus\tCoverage>10x(%)\tVariantsinconsensusx10\tMissenseVariants\t%Ns10x"
+columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\tNon-host-reads\t%Non-host-reads\tContigs\tLargest_contig\t%Genome_fraction"
 name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
+
+# Total reads
