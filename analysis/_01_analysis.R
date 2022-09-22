@@ -32,14 +32,16 @@ library(ggpubr, quietly = TRUE, warn.conflicts = FALSE)
 ################################################
 
 # PATHS
-
 path <- getwd()
 posible_path <- c("/data/bi/scratch_tmp/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN")
 samples_ref <- read.table(paste0(path, "/data/samples_ref.txt"), header = F)
 samples_id <- read.table(paste0(path, "/data/samples_id.txt"), header = F)
 
 # Run, user and host
-
 name_run <- str_split(posible_path, "/", simplify = T)[, 6]
 name_user <- str_split(posible_path, "_", simplify = T)[, 5]
 name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
+
+# columns names
+columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\treadsvirus\t%readsvirus\tunmappedreads\t%unmapedreads\tmedianDPcoveragevirus\tCoverage>10x(%)\tVariantsinconsensusx10\tMissenseVariants\t%Ns10x"
+name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
