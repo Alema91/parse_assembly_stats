@@ -40,6 +40,53 @@ samples_ref <- read.table(paste0(path, "/data/samples_ref.txt"), header = F)
 samples_id <- read.table(paste0(path, "/data/samples_id.txt"), header = F)
 fastq_path <- c("/srv/fastq_repo/MiSeq_GEN_317_20220713_MDFernanadez")
 
+for (i in 1:length(samples_id)) {
+
+    # Run, user, host and sequence
+    name_run <- str_split(fastq_path, "/", simplify = T)[, 4]
+    name_user <- str_split(posible_path, "_", simplify = T)[, 5]
+    name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
+    name_sequence <- samples_ref$V2[i]
+    name_id <- samples_ref$V1[i]
+
+    # columnas
+    columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\tNon-host-reads\tContigs\tLargest_contig\t%Genome_fraction"
+    name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
+
+    # totalreads
+    json_fastp <- fromJSON(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
+    value_totalreads <- json_fastp$summary[["after_filtering"]]$total_reads
+
+    # readshostR1
+    table_kraken <- read.table(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/kraken2/", name_id, ".kraken2.report.txt"), sep = "\t")
+    value_readhostr1 <- table_kraken$V2[table_kraken$V5 == 1]
+
+    # readshosh
+    value_readhost <- value_readhostr1 * 2
+
+    # readshosh
+    value_percreadhost <- table_kraken$V1[table_kraken$V5 == 1]
+
+    # non host reads
+    value_nonhostreads <- value_totalreads - value_readhost
+
+    # % non host
+    value_percnonhostreads <- round((value_readhost * 100) / value_totalreads, 2)
+
+    # Contigs
+    table_quast <- read.csv2("data/", name_sequence, "_20220726_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv", skip = 0, sep = "\t", header = T)
+    table_quast$Assembly <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
+    value_contigs <- table_quast$X..contigs[table_quast$Assembly == name_id[i]]
+    value_lcontig <- table_quast$Largest.contig[table_quast$Assembly == name_id[i]]
+    value_genomef <- table_quast$Genome.fraction....[table_quast$Assembly == name_id[i]]
+}
+
+
+
+
+
+
+
 # Run, user and host
 name_run <- str_split(fastq_path, "/", simplify = T)[, 4]
 name_user <- str_split(posible_path, "_", simplify = T)[, 5]
