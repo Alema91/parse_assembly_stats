@@ -42,6 +42,10 @@ samples_id <- read.table(paste0(path, "/data/samples_id.txt"), header = F)
 colnames(samples_id) <- c("id")
 fastq_path <- c("/srv/fastq_repo/MiSeq_GEN_317_20220713_MDFernanadez")
 
+# columnas
+columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\tNon-host-reads\t%Non-host-reads\tContigs\tLargest_contig\t%Genome_fraction"
+name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
+
 list_assembly <- list(0)
 for (i in 1:nrow(samples_id)) {
 
@@ -51,10 +55,6 @@ for (i in 1:nrow(samples_id)) {
     name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
     name_sequence <- samples_ref$ref[i]
     name_id <- samples_id$id[i]
-
-    # columnas
-    columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\tNon-host-reads\tContigs\tLargest_contig\t%Genome_fraction"
-    name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
 
     # totalreads
     json_fastp <- fromJSON(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
@@ -81,17 +81,20 @@ for (i in 1:nrow(samples_id)) {
     table_quast$id <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
     table_ref_quast <- join(table_quast, samples_ref, by = "id")
 
-    value_contigs <- table_ref_quast$X..contigs[table_ref_quast$id == name_id | table_ref_quast$ref == name_sequence]
-    value_lcontig <- table_ref_quast$Largest.contig[table_ref_quast$id == name_id | table_ref_quast$ref == name_sequence]
-    value_genomef <- table_ref_quast$Genome.fraction....[table_ref_quast$id == name_id | table_ref_quast$ref == name_sequence]
+    value_contigs <- as.numeric(table_ref_quast$X..contigs[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence])
+    value_lcontig <- as.numeric(table_ref_quast$Largest.contig[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence])
+    value_genomef <- as.numeric(table_ref_quast$Genome.fraction....[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence])
+
+    # empty values
+    if (length(value_contigs) == 0) {
+        value_contigs <- NA
+        value_lcontig <- NA
+        value_genomef <- NA
+    }
 
     # Create table
-    df_assembly <- data.frame(matrix(0, ncol = length(name_columns)))
-    colnames(df_assembly) <- name_columns
-
-    df_assembly[1, ] <- c(name_run, name_user, name_host, name_sequence, value_totalreads, value_readhostr1, value_readhost, value_percreadhost, value_nonhostreads, value_percnonhostreads, value_contigs, value_lcontig, value_genomef)
-
-    list_assembly[[i]] <- df_assembly
+    list_assembly[[i]] <- c(name_run, name_user, name_host, name_sequence, name_id, value_totalreads, value_readhostr1, value_readhost, value_percreadhost, value_nonhostreads, value_percnonhostreads, value_contigs, value_lcontig, value_genomef)
 }
 
-df_final <- do.call("rbind", list_assembly)
+df_final <- as.data.frame(do.call("rbind", list_assembly))
+colnames(df_final) <- name_columns
