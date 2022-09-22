@@ -36,13 +36,14 @@ library(jsonlite, quietly = TRUE, warn.conflicts = FALSE)
 # PATHS
 path <- getwd()
 posible_path <- c("/data/bi/scratch_tmp/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN")
-samples_ref <- read.table(paste0(path, "/data/samples_ref.txt"), header = F); colnames(samples_ref)<- c("id", "ref")
-samples_id <- read.table(paste0(path, "/data/samples_id.txt"), header = F); colnames(samples_id)<- c("id")
+samples_ref <- read.table(paste0(path, "/data/samples_ref.txt"), header = F)
+colnames(samples_ref) <- c("id", "ref")
+samples_id <- read.table(paste0(path, "/data/samples_id.txt"), header = F)
+colnames(samples_id) <- c("id")
 fastq_path <- c("/srv/fastq_repo/MiSeq_GEN_317_20220713_MDFernanadez")
 
-
-list_assembly<- list(0)
-for (i in 1:length(samples_id)) {
+list_assembly <- list(0)
+for (i in 1:nrow(samples_id)) {
 
     # Run, user, host and sequence
     name_run <- str_split(fastq_path, "/", simplify = T)[, 4]
@@ -76,13 +77,13 @@ for (i in 1:length(samples_id)) {
     value_percnonhostreads <- round((value_readhost * 100) / value_totalreads, 2)
 
     # Contigs
-    table_quast <- read.csv2("data/", name_sequence, "_20220726_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv", skip = 0, sep = "\t", header = T)
+    table_quast <- read.csv2(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
     table_quast$id <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
-    table_ref_quast<- join(table_quast, samples_ref, by = "id")
+    table_ref_quast <- join(table_quast, samples_ref, by = "id")
 
-    value_contigs <- table_quast$X..contigs[table_quast$id == name_id[i] | [table_quast$ref == name_ref[i]]
-    value_lcontig <- table_quast$Largest.contig[table_quast$id == name_id[i]| [table_quast$ref == name_ref[i]]
-    value_genomef <- table_quast$Genome.fraction....[table_quast$id == name_id[i]| [table_quast$ref == name_ref[i]]
+    value_contigs <- table_ref_quast$X..contigs[table_ref_quast$id == name_id | table_ref_quast$ref == name_sequence]
+    value_lcontig <- table_ref_quast$Largest.contig[table_ref_quast$id == name_id | table_ref_quast$ref == name_sequence]
+    value_genomef <- table_ref_quast$Genome.fraction....[table_ref_quast$id == name_id | table_ref_quast$ref == name_sequence]
 
     # Create table
     df_assembly <- data.frame(matrix(0, ncol = length(name_columns)))
@@ -90,8 +91,7 @@ for (i in 1:length(samples_id)) {
 
     df_assembly[1, ] <- c(name_run, name_user, name_host, name_sequence, value_totalreads, value_readhostr1, value_readhost, value_percreadhost, value_nonhostreads, value_percnonhostreads, value_contigs, value_lcontig, value_genomef)
 
-    list_assembly[[i]]<- df_assembly
-
+    list_assembly[[i]] <- df_assembly
 }
 
-
+df_final <- do.call("rbind", list_assembly)

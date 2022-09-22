@@ -1,0 +1,33 @@
+ 55.70	5031	5031	U	0	unclassified
+ 44.30	4001	0	R	1	root
+ 44.30	4001	0	R1	131567	  cellular organisms
+ 44.30	4001	0	D	2759	    Eukaryota
+ 44.30	4001	0	D1	33154	      Opisthokonta
+ 44.30	4001	0	K	33208	        Metazoa
+ 44.30	4001	0	K1	6072	          Eumetazoa
+ 44.30	4001	0	K2	33213	            Bilateria
+ 44.30	4001	0	K3	33511	              Deuterostomia
+ 44.30	4001	0	P	7711	                Chordata
+ 44.30	4001	0	P1	89593	                  Craniata
+ 44.30	4001	0	P2	7742	                    Vertebrata
+ 44.30	4001	0	P3	7776	                      Gnathostomata
+ 44.30	4001	0	P4	117570	                        Teleostomi
+ 44.30	4001	0	P5	117571	                          Euteleostomi
+ 44.30	4001	0	P6	8287	                            Sarcopterygii
+ 44.30	4001	0	P7	1338369	                              Dipnotetrapodomorpha
+ 44.30	4001	0	P8	32523	                                Tetrapoda
+ 44.30	4001	0	P9	32524	                                  Amniota
+ 44.30	4001	0	C	40674	                                    Mammalia
+ 44.30	4001	0	C1	32525	                                      Theria
+ 44.30	4001	0	C2	9347	                                        Eutheria
+ 44.30	4001	0	C3	1437010	                                          Boreoeutheria
+ 44.30	4001	0	C4	314146	                                            Euarchontoglires
+ 44.30	4001	0	O	9443	                                              Primates
+ 44.30	4001	0	O1	376913	                                                Haplorrhini
+ 44.30	4001	0	O2	314293	                                                  Simiiformes
+ 44.30	4001	0	O3	9526	                                                    Catarrhini
+ 44.30	4001	0	O4	314295	                                                      Hominoidea
+ 44.30	4001	0	F	9604	                                                        Hominidae
+ 44.30	4001	0	F1	207598	                                                          Homininae
+ 44.30	4001	0	G	9605	                                                            Homo
+ 44.30	4001	4001	S	9606	                                                              Homo sapiens
