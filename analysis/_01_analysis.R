@@ -21,6 +21,8 @@ library(knitr, quietly = TRUE, warn.conflicts = FALSE)
 library(magrittr, quietly = TRUE, warn.conflicts = FALSE)
 library(ggpubr, quietly = TRUE, warn.conflicts = FALSE)
 
+library(jsonlite, quietly = TRUE, warn.conflicts = FALSE)
+
 ### Not in o in ----
 
 `%notin%` <- Negate(`%in%`)
@@ -47,3 +49,15 @@ columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\tre
 name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
 
 # Total reads
+json_fastp <- fromJSON("data/EVD68_20220726_viralrecon_mapping/fastp/PTA102.fastp.json")
+value_totalreads <- json_fastp$summary[["after_filtering"]]$total_reads
+
+# readshostR1
+table_kraken <- read.table("data/EVD68_20220726_viralrecon_mapping/kraken2/PTA102.kraken2.report.txt", sep = "\t")
+value_readhostr1 <- table_kraken$V2[table_kraken$V5 == 1]
+
+# readshosh
+value_readhost <- value_readhostr1 * 2
+
+# readshosh
+value_percreadhost <- table_kraken$V1[table_kraken$V5 == 1]
