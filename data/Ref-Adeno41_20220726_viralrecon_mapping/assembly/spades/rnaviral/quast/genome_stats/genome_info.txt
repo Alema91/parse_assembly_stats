@@ -1,0 +1,15 @@
+Genomic features of type "ANY" loaded: 39
+reference chromosomes:
+	MK962810.1 (total length: 34064 bp, total length without N's: 34060 bp, maximal covered length: 7033 bp)
+
+total genome size: 34064
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+PTA123_scaffolds         | 20.649    | 1.006       | 14        | 1         | 13        | -         | -         |

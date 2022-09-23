@@ -1,0 +1,12 @@
+NODE_10_length_893_cov_2.045122	893	0	893	-	MK962810.1	34064	19811	20704	892	892	60	NM:i:1	ms:i:890	AS:i:890	nn:i:1	tp:A:P	cm:i:81	s1:i:830	s2:i:0	de:f:0	rl:i:0	cg:Z:893M	cs:Z::875*ng:17
+NODE_12_length_717_cov_1.762422	717	0	717	+	MK962810.1	34064	28351	29068	715	717	60	NM:i:2	ms:i:705	AS:i:705	nn:i:0	tp:A:P	cm:i:61	s1:i:676	s2:i:0	de:f:0.0028	rl:i:0	cg:Z:717M	cs:Z::249*tc:435*ag:31
+NODE_13_length_716_cov_2.223950	716	0	716	-	MK962810.1	34064	23696	24412	716	716	60	NM:i:0	ms:i:716	AS:i:716	nn:i:0	tp:A:P	cm:i:70	s1:i:697	s2:i:0	de:f:0	rl:i:0	cg:Z:716M	cs:Z::716
+NODE_14_length_670_cov_2.701843	670	0	670	+	MK962810.1	34064	3606	4276	669	670	60	NM:i:1	ms:i:664	AS:i:664	nn:i:0	tp:A:P	cm:i:60	s1:i:651	s2:i:0	de:f:0.0015	rl:i:0	cg:Z:670M	cs:Z::597*ct:72
+NODE_15_length_661_cov_3.051020	661	0	661	+	MK962810.1	34064	29398	30047	648	661	60	NM:i:13	ms:i:603	AS:i:615	nn:i:0	tp:A:P	cm:i:59	s1:i:615	s2:i:0	de:f:0.0031	rl:i:0	cg:Z:154M12I495M	cs:Z::154+ggagcactgcgg:100*ct:394
+NODE_17_length_600_cov_1.466793	600	0	600	+	MK962810.1	34064	14857	15457	596	600	60	NM:i:4	ms:i:576	AS:i:576	nn:i:0	tp:A:P	cm:i:58	s1:i:538	s2:i:0	de:f:0.0067	rl:i:0	cg:Z:600M	cs:Z::19*gt:16*ct:21*cg*ct:540
+NODE_18_length_591_cov_1.449807	591	0	591	-	MK962810.1	34064	31938	32529	589	591	60	NM:i:2	ms:i:579	AS:i:579	nn:i:0	tp:A:P	cm:i:54	s1:i:544	s2:i:0	de:f:0.0034	rl:i:0	cg:Z:591M	cs:Z::544*ag:25*tg:20
+NODE_19_length_580_cov_1.899408	580	0	580	-	MK962810.1	34064	8973	9553	580	580	60	NM:i:0	ms:i:580	AS:i:580	nn:i:0	tp:A:P	cm:i:51	s1:i:564	s2:i:0	de:f:0	rl:i:0	cg:Z:580M	cs:Z::580
+NODE_20_length_572_cov_4.929860	572	27	572	-	MK962810.1	34064	33521	34064	543	545	60	NM:i:2	ms:i:533	AS:i:533	nn:i:0	tp:A:P	cm:i:52	s1:i:513	s2:i:0	de:f:0.0018	rl:i:0	cg:Z:290M2I253M	cs:Z::290+aa:253
+NODE_20_length_572_cov_4.929860	572	0	73	+	MK962810.1	34064	83	156	73	73	21	NM:i:0	ms:i:73	AS:i:73	nn:i:0	tp:A:P	cm:i:4	s1:i:58	s2:i:0	de:f:0	rl:i:0	cg:Z:73M	cs:Z::73
+NODE_21_length_539_cov_1.165236	539	0	539	-	MK962810.1	34064	30362	30901	538	539	60	NM:i:1	ms:i:533	AS:i:533	nn:i:0	tp:A:P	cm:i:49	s1:i:500	s2:i:0	de:f:0.0019	rl:i:0	cg:Z:539M	cs:Z::522*ag:16
+NODE_22_length_538_cov_2.156989	538	0	538	-	MK962810.1	34064	745	1281	536	538	60	NM:i:2	ms:i:526	AS:i:526	nn:i:0	tp:A:P	cm:i:53	s1:i:522	s2:i:0	de:f:0.0019	rl:i:0	cg:Z:294M2I242M	cs:Z::294+tt:242
