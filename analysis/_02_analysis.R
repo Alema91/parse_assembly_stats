@@ -24,8 +24,6 @@ library(writexl, quietly = TRUE, warn.conflicts = FALSE)
 path <- getwd()
 samples_ref <- read.table(paste0(path, "/samples_ref.txt"), header = F)
 colnames(samples_ref) <- c("id", "ref")
-samples_id <- read.table(paste0(path, "/samples_id.txt"), header = F)
-colnames(samples_id) <- c("id")
 
 # Fastq path
 
@@ -37,7 +35,7 @@ columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\tre
 name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
 
 list_assembly <- list(0)
-for (i in 1:nrow(samples_id)) {
+for (i in 1:nrow(samples_ref)) {
 
     # Run, user, host and sequence
     name_run <- str_split(path_run, "/", simplify = T)[, 4]
@@ -47,14 +45,14 @@ for (i in 1:nrow(samples_id)) {
     date_service <- str_split(date_service_1, "/", simplify = T)[, 3]
 
     name_sequence <- samples_ref$ref[i]
-    name_id <- samples_id$id[i]
+    name_id <- samples_ref$id[i]
 
     # totalreads
-    json_fastp <- fromJSON(paste0("data/", name_sequence, "_", date_service, "_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
+    json_fastp <- fromJSON(paste0(name_sequence, "_", date_service, "_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
     value_totalreads <- json_fastp$summary[["after_filtering"]]$total_reads
 
     # readshostR1
-    table_kraken <- read.table(paste0("data/", name_sequence, "_", date_service, "_viralrecon_mapping/kraken2/", name_id, ".kraken2.report.txt"), sep = "\t")
+    table_kraken <- read.table(paste0(name_sequence, "_", date_service, "_viralrecon_mapping/kraken2/", name_id, ".kraken2.report.txt"), sep = "\t")
     value_readhostr1 <- table_kraken$V2[table_kraken$V5 == 1]
 
     # readshosh
@@ -70,7 +68,7 @@ for (i in 1:nrow(samples_id)) {
     value_percnonhostreads <- round((value_readhost * 100) / value_totalreads, 2)
 
     # Contigs
-    table_quast <- read.csv2(paste0("data/", name_sequence, "_", date_service, "_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
+    table_quast <- read.csv2(paste0(name_sequence, "_", date_service, "_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
     table_quast$id <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
     table_ref_quast <- join(table_quast, samples_ref, by = "id")
 
