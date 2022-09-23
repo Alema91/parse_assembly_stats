@@ -1,0 +1,9 @@
+run	user	host	Virussequence	sample	totalreads	readshostR1	readshost	%readshost	Non-host-reads	%Non-host-reads	Contigs	Largest_contig	%Genome_fraction
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	EVD68	PTA102	123766	478	956	0.77	122810	0.77	3	7338	NA
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	EVD68	PTA103	223574	1114	2228	1	221346	1	4	7449	NA
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	EVD68	PTA127	125676	59846	119692	95.24	5984	95.24	5	4536	99.741
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	EVD68	PTA128	18064	4001	8002	44.3	10062	44.3	10	7315	99.754
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	EVD68	PTA129	494	88	176	35.63	318	35.63	NA	NA	NA
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	EVD68	PTA132	1107398	20422	40844	3.69	1066554	3.69	22	7320	99.768
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	Ref-Adeno41	PTA123	298110	87	174	0.06	297936	0.06	22	3315	20.649
+MiSeq_GEN_317_20220713_MDFernanadez	mdfernandez	human	Ref-Adeno41	PTA111	140196	1	2	0	140194	0	12	4389	NA

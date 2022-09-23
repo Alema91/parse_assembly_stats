@@ -20,8 +20,8 @@ library(kableExtra, quietly = TRUE, warn.conflicts = FALSE)
 library(knitr, quietly = TRUE, warn.conflicts = FALSE)
 library(magrittr, quietly = TRUE, warn.conflicts = FALSE)
 library(ggpubr, quietly = TRUE, warn.conflicts = FALSE)
-
 library(jsonlite, quietly = TRUE, warn.conflicts = FALSE)
+library(writexl, quietly = TRUE, warn.conflicts = FALSE)
 
 ### Not in o in ----
 
@@ -67,7 +67,7 @@ for (i in 1:nrow(samples_id)) {
     # readshosh
     value_readhost <- value_readhostr1 * 2
 
-    # readshosh
+    # readshost
     value_percreadhost <- table_kraken$V1[table_kraken$V5 == 1]
 
     # non host reads
@@ -98,3 +98,6 @@ for (i in 1:nrow(samples_id)) {
 
 df_final <- as.data.frame(do.call("rbind", list_assembly))
 colnames(df_final) <- name_columns
+
+# Write table
+write.table(df_final, "results/assembly_stats.csv", row.names = F, col.names = T, sep = "\t", quote = F)
