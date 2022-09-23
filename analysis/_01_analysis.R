@@ -38,8 +38,6 @@ path <- getwd()
 posible_path <- c("/data/bi/scratch_tmp/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN")
 samples_ref <- read.table(paste0(path, "/data/samples_ref.txt"), header = F)
 colnames(samples_ref) <- c("id", "ref")
-samples_id <- read.table(paste0(path, "/data/samples_id.txt"), header = F)
-colnames(samples_id) <- c("id")
 fastq_path <- c("/srv/fastq_repo/MiSeq_GEN_317_20220713_MDFernanadez")
 
 # columnas
@@ -47,14 +45,14 @@ columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\tre
 name_columns <- as.vector(str_split(columnas, "\t", simplify = T))
 
 list_assembly <- list(0)
-for (i in 1:nrow(samples_id)) {
+for (i in 1:nrow(samples_ref)) {
 
     # Run, user, host and sequence
     name_run <- str_split(fastq_path, "/", simplify = T)[, 4]
     name_user <- str_split(posible_path, "_", simplify = T)[, 5]
     name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
     name_sequence <- samples_ref$ref[i]
-    name_id <- samples_id$id[i]
+    name_id <- samples_ref$id[i]
 
     # totalreads
     json_fastp <- fromJSON(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
