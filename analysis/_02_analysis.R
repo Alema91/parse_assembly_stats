@@ -50,11 +50,11 @@ for (i in 1:nrow(samples_id)) {
     name_id <- samples_id$id[i]
 
     # totalreads
-    json_fastp <- fromJSON(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
+    json_fastp <- fromJSON(paste0("data/", name_sequence, "_", date_service, "_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
     value_totalreads <- json_fastp$summary[["after_filtering"]]$total_reads
 
     # readshostR1
-    table_kraken <- read.table(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/kraken2/", name_id, ".kraken2.report.txt"), sep = "\t")
+    table_kraken <- read.table(paste0("data/", name_sequence, "_", date_service, "_viralrecon_mapping/kraken2/", name_id, ".kraken2.report.txt"), sep = "\t")
     value_readhostr1 <- table_kraken$V2[table_kraken$V5 == 1]
 
     # readshosh
@@ -70,7 +70,7 @@ for (i in 1:nrow(samples_id)) {
     value_percnonhostreads <- round((value_readhost * 100) / value_totalreads, 2)
 
     # Contigs
-    table_quast <- read.csv2(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
+    table_quast <- read.csv2(paste0("data/", name_sequence, "_", date_service, "_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
     table_quast$id <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
     table_ref_quast <- join(table_quast, samples_ref, by = "id")
 
@@ -94,23 +94,3 @@ colnames(df_final) <- name_columns
 
 # Write table
 write.table(df_final, "results/assembly_stats.csv", row.names = F, col.names = T, sep = "\t", quote = F)
-
-
-# PATHS
-path <- getwd()
-samples_ref <- read.table(paste0(path, "/samples_ref.txt"), header = F)
-colnames(samples_ref) <- c("id", "ref")
-samples_id <- read.table(paste0(path, "/samples_id.txt"), header = F)
-colnames(samples_id) <- c("id")
-
-# Fastq path
-
-fastq_names <- list.files("../../RAW_NC/")
-path_run <- Sys.readlink(paste0("../../RAW_NC/", fastq_path[1]))
-
-# Run, user, host and sequence
-name_run <- str_split(path_run, "/", simplify = T)[, 4]
-name_user <- str_split(path, "_", simplify = T)[, 6]
-name_host <- tolower(str_split(path, "_", simplify = T)[, 10])
-date_service_1 <- str_split(path, "_", simplify = T)[, 7]
-date_service <- str_split(date_service_1, "/", simplify = T)[, 3]
