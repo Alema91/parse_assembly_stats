@@ -41,8 +41,11 @@ for (i in 1:nrow(samples_id)) {
 
     # Run, user, host and sequence
     name_run <- str_split(path_run, "/", simplify = T)[, 4]
-    name_user <- str_split(posible_path, "_", simplify = T)[, 5]
-    name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
+    name_user <- str_split(path, "_", simplify = T)[, 6]
+    name_host <- tolower(str_split(path, "_", simplify = T)[, 10])
+    date_service_1 <- str_split(path, "_", simplify = T)[, 7]
+    date_service <- str_split(date_service_1, "/", simplify = T)[, 3]
+
     name_sequence <- samples_ref$ref[i]
     name_id <- samples_id$id[i]
 
@@ -107,5 +110,7 @@ path_run <- Sys.readlink(paste0("../../RAW_NC/", fastq_path[1]))
 
 # Run, user, host and sequence
 name_run <- str_split(path_run, "/", simplify = T)[, 4]
-name_user <- str_split(posible_path, "_", simplify = T)[, 5]
-name_host <- tolower(str_split(posible_path, "_", simplify = T)[, 9])
+name_user <- str_split(path, "_", simplify = T)[, 6]
+name_host <- tolower(str_split(path, "_", simplify = T)[, 10])
+date_service_1 <- str_split(path, "_", simplify = T)[, 7]
+date_service <- str_split(date_service_1, "/", simplify = T)[, 3]
