@@ -15,3 +15,13 @@ Parsear los valores del output de viralrecon para obtener la tabla de assembly s
 12. Contigs
 13. Largest contig
 14. % Genome fraction
+
+# Modo de uso
+
+```
+# conda activate R-4.1.2
+
+cp create_assembly_stats.R *_ANALYSIS01_METAGENOMIC_HUMAN
+Rscript create_assembly_stats.R
+
+```
