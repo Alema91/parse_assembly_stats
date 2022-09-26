@@ -37,7 +37,13 @@ library(writexl, quietly = TRUE, warn.conflicts = FALSE)
 path <- getwd()
 posible_path <- c("/data/bi/scratch_tmp/bi/SRVCNM716_20220722_GENOMEEV15_mdfernandez_S/ANALYSIS/20220726_ANALYSIS01_METAGENOMIC_HUMAN")
 samples_ref <- read.table(paste0(path, "/data/samples_ref.txt"), header = F)
-colnames(samples_ref) <- c("id", "ref")
+
+if (ncol(samples_ref) == 2) {
+    colnames(samples_ref) <- c("id", "ref")
+} else {
+    colnames(samples_ref) <- c("id", "ref", "host")
+}
+
 fastq_path <- c("/srv/fastq_repo/MiSeq_GEN_317_20220713_MDFernanadez")
 
 # columnas
@@ -84,9 +90,16 @@ for (i in 1:nrow(samples_ref)) {
     value_genomef <- as.numeric(table_ref_quast$Genome.fraction....[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence])
 
     # empty values
+    # empty values
     if (length(value_contigs) == 0) {
         value_contigs <- NA
+    }
+
+    if (length(value_lcontig) == 0) {
         value_lcontig <- NA
+    }
+
+    if (length(value_genomef) == 0) {
         value_genomef <- NA
     }
 

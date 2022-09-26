@@ -24,7 +24,12 @@ library(writexl, quietly = TRUE, warn.conflicts = FALSE)
 # PATHS
 path <- getwd()
 samples_ref <- read.table(paste0(path, "/samples_ref.txt"), header = F)
-colnames(samples_ref) <- c("id", "ref")
+
+if (ncol(samples_ref) == 2) {
+    colnames(samples_ref) <- c("id", "ref")
+} else {
+    colnames(samples_ref) <- c("id", "ref", "host")
+}
 
 # Fastq path
 
@@ -49,8 +54,8 @@ for (i in 1:nrow(samples_ref)) {
     name_id <- samples_ref$id[i]
 
     # path outputfolder
-    directorios<- list.dirs()
-    patron_workdir<- paste0(name_sequence, "_", date_service)
+    directorios <- list.dirs()
+    patron_workdir <- paste0(name_sequence, "_", date_service)
     workdir <- directorios[grepl(patron_workdir, directorios)][1]
 
     # totalreads

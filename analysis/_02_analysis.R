@@ -98,3 +98,8 @@ colnames(df_final) <- name_columns
 
 # Write table
 write.table(df_final, "results/assembly_stats.csv", row.names = F, col.names = T, sep = "\t", quote = F)
+
+dirs <- list.dirs()
+
+
+dirs <- dirs[grepl(your_pattern, dirs)]
