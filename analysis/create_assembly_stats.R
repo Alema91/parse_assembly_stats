@@ -13,6 +13,7 @@ library(readxl, quietly = TRUE, warn.conflicts = FALSE)
 library(stringr, quietly = TRUE, warn.conflicts = FALSE)
 library(jsonlite, quietly = TRUE, warn.conflicts = FALSE)
 library(writexl, quietly = TRUE, warn.conflicts = FALSE)
+library(writexl, quietly = TRUE, warn.conflicts = FALSE)
 
 ################################################
 ################################################
@@ -27,8 +28,8 @@ colnames(samples_ref) <- c("id", "ref")
 
 # Fastq path
 
-fastq_names <- list.files("../../RAW_NC/")
-path_run <- Sys.readlink(paste0("../../RAW_NC/", fastq_names[1]))
+fastq_names <- list.files("../../RAW/")
+path_run <- Sys.readlink(paste0("../../RAW/", fastq_names[1]))
 
 # columnas
 columnas <- "run\tuser\thost\tVirussequence\tsample\ttotalreads\treadshostR1\treadshost\t%readshost\tNon-host-reads\t%Non-host-reads\tContigs\tLargest_contig\t%Genome_fraction"
@@ -47,12 +48,17 @@ for (i in 1:nrow(samples_ref)) {
     name_sequence <- samples_ref$ref[i]
     name_id <- samples_ref$id[i]
 
+    # path outputfolder
+    directorios<- list.dirs()
+    patron_workdir<- paste0(name_sequence, "_", date_service)
+    workdir <- directorios[grepl(patron_workdir, directorios)][1]
+
     # totalreads
-    json_fastp <- fromJSON(paste0(name_sequence, "_", date_service, "_viralrecon_mapping/fastp/", name_id, ".fastp.json"))
+    json_fastp <- fromJSON(paste0(workdir, "/fastp/", name_id, ".fastp.json"))
     value_totalreads <- json_fastp$summary[["after_filtering"]]$total_reads
 
     # readshostR1
-    table_kraken <- read.table(paste0(name_sequence, "_", date_service, "_viralrecon_mapping/kraken2/", name_id, ".kraken2.report.txt"), sep = "\t")
+    table_kraken <- read.table(paste0(workdir, "/kraken2/", name_id, ".kraken2.report.txt"), sep = "\t")
     value_readhostr1 <- table_kraken$V2[table_kraken$V5 == 1]
 
     # readshosh
@@ -68,7 +74,7 @@ for (i in 1:nrow(samples_ref)) {
     value_percnonhostreads <- round((value_readhost * 100) / value_totalreads, 2)
 
     # Contigs
-    table_quast <- read.csv2(paste0(name_sequence, "_", date_service, "_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
+    table_quast <- read.csv2(paste0(workdir, "/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
     table_quast$id <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
     table_ref_quast <- join(table_quast, samples_ref, by = "id")
 
