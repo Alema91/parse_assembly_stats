@@ -79,7 +79,13 @@ for (i in 1:nrow(samples_ref)) {
     # empty values
     if (length(value_contigs) == 0) {
         value_contigs <- NA
+    }
+
+    if (length(value_lcontig) == 0) {
         value_lcontig <- NA
+    }
+
+    if (length(value_genomef) == 0) {
         value_genomef <- NA
     }
 
