@@ -82,25 +82,33 @@ for (i in 1:nrow(samples_ref)) {
 
     # Contigs
     table_quast <- read.csv2(paste0("data/", name_sequence, "_20220726_viralrecon_mapping/assembly/spades/rnaviral/quast/transposed_report.tsv"), skip = 0, sep = "\t", header = T)
-    table_quast$id <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
-    table_ref_quast <- join(table_quast, samples_ref, by = "id")
 
-    value_contigs <- as.numeric(table_ref_quast$X..contigs[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence])
-    value_lcontig <- as.numeric(table_ref_quast$Largest.contig[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence])
-    value_genomef <- as.numeric(table_ref_quast$Genome.fraction....[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence])
-
-    # empty values
-    # empty values
-    if (length(value_contigs) == 0) {
+    # no quast error
+    if (exists("table_quast") == FALSE) {
         value_contigs <- NA
-    }
-
-    if (length(value_lcontig) == 0) {
         value_lcontig <- NA
-    }
-
-    if (length(value_genomef) == 0) {
         value_genomef <- NA
+    } else {
+        table_quast$id <- str_split(table_quast$Assembly, ".scaffolds", simplify = T)[, 1]
+        table_ref_quast <- join(table_quast, samples_ref, by = "id")
+
+        value_contigs <- suppressWarnings(as.numeric(table_ref_quast$X..contigs[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence]))
+        value_lcontig <- suppressWarnings(as.numeric(table_ref_quast$Largest.contig[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence]))
+        value_genomef <- suppressWarnings(as.numeric(table_ref_quast$Genome.fraction....[table_ref_quast$id == name_id & table_ref_quast$ref == name_sequence]))
+
+        # empty values
+        # empty values
+        if (length(value_contigs) == 0) {
+            value_contigs <- NA
+        }
+
+        if (length(value_lcontig) == 0) {
+            value_lcontig <- NA
+        }
+
+        if (length(value_genomef) == 0) {
+            value_genomef <- NA
+        }
     }
 
     # Create table
